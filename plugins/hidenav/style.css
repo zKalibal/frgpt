@@ -1,0 +1,37 @@
+/*impostare altezza nav*/
+body{
+}
+.hidenav.fixed {
+    transition: none!important;
+}
+.hidenav.nav-up{
+    transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+/*header.nav-up+*+* .filterfixed{
+    height:100%!important;
+    top:0;
+}*/
+#container{
+     transition: top 0.2s ease-in-out;
+}
+.hidenav.nav-up+#container {
+    top:0!important;
+}
+.hidenav{
+    width: 100%;
+    z-index:999!important;
+    transition: all 0.2s ease-in-out;
+}
+body:not(.hidenav_gap) .hidenav, body.hidenav_gap.ready .hidenav{
+    position: fixed;
+    top: 0;
+}
+@media (max-width: 767px) {
+    /*body{
+        padding-top: 74px;
+    }*/
+}
